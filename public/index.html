@@ -6,7 +6,7 @@
     <title>Recommendation Tool</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="checkPassword()">
     <div id="app" class="container">
         <h1>Recommendation Tool</h1>
         <textarea id="textInput" placeholder="Enter text here..."></textarea>
@@ -17,6 +17,20 @@
         </div>
         <div id="result" class="result"></div>
     </div>
+
+    <!-- Password Protection Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="passwordForm">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
     <script src="app.js"></script>
+    <script src="password.js"></script>
 </body>
 </html>
